@@ -1,0 +1,163 @@
+﻿h2 {
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: #fff;
+    color: rgb(0,0,255);
+    border: 1px solid rgb(0,0,255);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1.25em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#cardContainer {
+    /*position: static;*/
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ol#card {
+    font-size: 3em;
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: 120px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    align-items: stretch;
+    width: 600px;
+    border-bottom: 1px solid #000;
+    z-index: 10;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    user-select: none;
+}
+
+ol#card > li {
+    border: 1px solid #000;
+    border-right: none;
+    border-bottom: none;
+    text-align: center;
+    line-height: 120px;
+    position: relative;
+}
+
+ol#card > li > div {
+    z-index: 10;
+    position: relative;
+}
+
+ol#card > li:nth-child(-n+5) {
+    background-color: #000;
+    color: #fff;
+}
+
+ol#card > li:nth-child(n+6) {
+    cursor: pointer;
+}
+
+ol#card > li:nth-child(18) {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.75em;
+    cursor: unset;
+}
+
+ol#card > li:nth-child(18) > img {
+    margin-bottom: -12px;
+}
+
+ol#card > li:nth-child(5n) {
+    border-right: 1px solid #000;
+}
+
+.centerLogo {
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: -22px !important;	
+}
+
+.daub {
+    z-index: 5;
+    position: absolute;
+}
+
+ol#daubers {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: 120px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 600px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+ol#daubers > li {
+    position: relative;
+}
+
+.rainbow {
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes rainbow {
+    100%,0% {
+        color: rgb(255,0,0);
+    }
+
+    8% {
+        color: rgb(255,127,0);
+    }
+
+    16% {
+        color: rgb(255,255,0);
+    }
+
+    25% {
+        color: rgb(127,255,0);
+    }
+
+    33% {
+        color: rgb(0,255,0);
+    }
+
+    41% {
+        color: rgb(0,255,127);
+    }
+
+    50% {
+        color: rgb(0,255,255);
+    }
+
+    58% {
+        color: rgb(0,127,255);
+    }
+
+    66% {
+        color: rgb(0,0,255);
+    }
+
+    75% {
+        color: rgb(127,0,255);
+    }
+
+    83% {
+        color: rgb(255,0,255);
+    }
+
+    91% {
+        color: rgb(255,0,127);
+    }
+}
